@@ -179,7 +179,7 @@ print(F'추출된 제목 : \n{result_title}')
 with open(f"result_data"+'_'+tday_s+'.txt', "w") as file:
     file.write(result_title)
 
-winTerminal = gw.getWindowsWithTitle('aliex_clipper.exe')[0]
+winTerminal = gw.getWindowsWithTitle('aliex_clipper')[0]
 
 if not winTerminal.isActive:
     pywinauto.application.Application().connect(handle=winTerminal._hWnd).top_window().set_focus()
