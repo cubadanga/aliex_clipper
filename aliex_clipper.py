@@ -176,7 +176,7 @@ win.maximize()
 result_title = title_collector(page_min, page_max)
 print(F'추출된 제목 : \n{result_title}')
 
-with open(f"result_data"+'_'+tday_s+'.txt', "w") as file:
+with open(f"result_data"+'_'+tday_s+'.txt', 'w', encoding="utf-8") as file:
     file.write(result_title)
 
 winTerminal = gw.getWindowsWithTitle('aliex_clipper')[0]
